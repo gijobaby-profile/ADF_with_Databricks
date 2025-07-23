@@ -22,6 +22,10 @@
 						"p_file_date": {
 							"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
 							"type": "Expression"
+						},
+						"configJson": {
+							"value": "@pipeline().parameters.configJson",
+							"type": "Expression"
 						}
 					}
 				}
@@ -30,6 +34,10 @@
 		"parameters": {
 			"p_window_end_date": {
 				"type": "string"
+			},
+			"configJson": {
+				"type": "string",
+				"defaultValue": "\"{\\\"source_path\\\": \\\"/mnt/data/input/\\\", \\\"target_table\\\": \\\"sales_table\\\", \\\"env\\\": \\\"dev\\\", \\\"max_records\\\": 1000}\""
 			}
 		},
 		"variables": {
