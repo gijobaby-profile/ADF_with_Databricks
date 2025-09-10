@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "databricks-course-adf-gijo"
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"linkedService2_JSON_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricks_ADF_Gijo_properties_typeProperties_existingClusterId": {
+			"value": "0723-135912-v8q17nou"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
