@@ -1,0 +1,40 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Job1",
+				"type": "DatabricksJob",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"jobId": "745345590068944",
+					"jobParameters": {
+						"jpSOURCE_TYPE": {
+							"value": "@pipeline().parameters.pSOURCE_TYPE",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_ADF_Gijo",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"pSOURCE_TYPE": {
+				"type": "string",
+				"defaultValue": "eventhubs"
+			}
+		},
+		"annotations": []
+	}
+}
