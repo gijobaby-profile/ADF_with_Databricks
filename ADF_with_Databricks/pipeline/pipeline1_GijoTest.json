@@ -15,6 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"jobId": "253308393424145",
 					"jobParameters": {
 						"pSOURCE_TYPE": {
 							"value": "@pipeline().parameters.pSOURCE_TYPE",
