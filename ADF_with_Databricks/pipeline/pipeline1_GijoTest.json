@@ -15,10 +15,17 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"jobId": "745345590068944",
 					"jobParameters": {
-						"jpSOURCE_TYPE": {
+						"pSOURCE_TYPE": {
 							"value": "@pipeline().parameters.pSOURCE_TYPE",
+							"type": "Expression"
+						},
+						"pVOLUME_PATH": {
+							"value": "@pipeline().parameters.pVOLUME_PATH",
+							"type": "Expression"
+						},
+						"pCATEGORY": {
+							"value": "@pipeline().parameters.pCATEGORY",
 							"type": "Expression"
 						}
 					}
@@ -33,6 +40,14 @@
 			"pSOURCE_TYPE": {
 				"type": "string",
 				"defaultValue": "eventhubs"
+			},
+			"pVOLUME_PATH": {
+				"type": "string",
+				"defaultValue": "/Volumes/circuitbox/landing/operational_data"
+			},
+			"pCATEGORY": {
+				"type": "string",
+				"defaultValue": "addresses"
 			}
 		},
 		"annotations": []
